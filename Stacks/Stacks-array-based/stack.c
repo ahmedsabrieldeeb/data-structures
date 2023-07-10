@@ -74,5 +74,11 @@ int StackSize(Stack *ps){
     Notice: the same as CreateStack() but it differs conceptually
 */
 void ClearStack(Stack *ps){
-    ps->top = 0
+    ps->top = 0;
+}
+
+/*  Pre: the satck is initialized  */
+void TraverseStack(Stack *ps, void(*pf)(StackEntry)){
+    for (int i=ps->top; i > 0; i--)
+        (*pf)(ps->entry[i-1]);
 }
