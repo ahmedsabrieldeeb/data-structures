@@ -15,7 +15,7 @@ void main(){
 
     CreateStack(&s);
 
-    printf("Stack is initialized Successfully\nHow many numbers you want to store in the stack: ");
+    printf("Stack is initialized Successfully\nhow many numbers you want to store in the stack: ");
     scanf("%d", &n);
     
     printf("Enter the numbers in row:\n");
