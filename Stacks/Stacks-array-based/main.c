@@ -9,33 +9,34 @@ void Display(StackEntry e){
 }
 
 void main(){
-
-    StackEntry e = 10;
+    int n = 0;
     Stack s;
-    int x;
+    StackEntry e;
 
     CreateStack(&s);
+
+    printf("Stack is initialized Successfully\nHow many numbers you want to store in the stack: ");
+    scanf("%d", &n);
     
-    if (!StackFull(&s))
+    printf("Enter the numbers in row:\n");
+    for (int i = 0; i < n; i++){
+        scanf("%d", &e);
         Push(e, &s);
+    }
 
-    x = StackSize(&s);
-    printf("%d\n", x);
+    printf("Size is: %d\n", StackSize(&s));
+    printf("top is: %d\n", s.top);
+    printf("Let's Traverse the stack to see the content\n");
+
     TraverseStack(&s, &Display);
-    
-    if (!StackEmpty(&s))
-        Pop(&e, &s);
-    
-    if (!StackEmpty(&s))
-        StackTop(&e, &s);
-    
-    x = StackSize(&s); /* could be s->top but it violets the concept of Encapsulation
-                        since you as a user don't know details of the stack just you have the mechanisms*/
-    printf("%d\n", x);
 
+    printf("I will clear the stack, Sorry\n");
     ClearStack(&s);
+    printf("Now, top is: %d and Size is: %d\n", s.top, StackSize(&s));
 
-    TraverseStack(&s, &Display);
+    printf("I can show you the values still since I am both the user and implementer\n"
+            "this is the first value: %d\n"
+            "this is the second value: %d\n", s.entry[s.top], s.entry[s.top + 1]);
 
     return;
 }
