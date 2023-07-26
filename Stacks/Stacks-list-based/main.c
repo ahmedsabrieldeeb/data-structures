@@ -9,6 +9,7 @@ void Display(StackEntry e){
 }
 
 void main(){
+    
     int n = 0;
     Stack s;
     StackEntry e;
@@ -34,7 +35,9 @@ void main(){
     ClearStack(&s);
     printf("Now, Size is: %d\n", StackSize(&s));
 
-    return;
+
+
+
 }
 
 /*  StackTop() in User level using other mechanisms

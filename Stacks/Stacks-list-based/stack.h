@@ -26,4 +26,6 @@ void    StackTop           (StackEntry *, Stack *);
 int     StackSize          (Stack *);
 void    TraverseStack      (Stack *, void(*)(StackEntry));
 void    ClearStack         (Stack *ps);
+
+void    MoveDisks           (int count, int start, int end, int temp);
 #endif /* STACK_H */
