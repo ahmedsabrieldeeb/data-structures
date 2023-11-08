@@ -4,8 +4,8 @@
 typedef int StackEntry;
 
 typedef struct stacknode{
-    StackEntry entry;
-    struct stacknode *next;
+	StackEntry entry;
+	struct stacknode *next;
 }StackNode;
 
 /*
@@ -13,8 +13,8 @@ this is more consistent and not violeting the other procedues of DS, than to say
 typedef StackNode *Stack;
 */
 typedef struct stack{
-    StackNode *top;
-    int size;
+	StackNode *top;
+	int size;
 }Stack;
 
 void    CreateStack        (Stack *);
